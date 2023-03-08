@@ -1,0 +1,121 @@
+---
+name: fabric_main
+version: "1.1"
+client:
+  organization: streamr
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+channels:
+  athlynk:
+    orderers:
+      - orderer0.ordererorg.domain.com
+      - orderer1.ordererorg.domain.com
+      - orderer2.ordererorg.domain.com
+    peers:
+      - peer0.streamr.domain.com
+      - peer0.lynkeus.domain.com
+      - peer1.streamr.domain.com
+      - peer1.lynkeus.domain.com
+
+organizations:
+  streamr:
+    mspid: StreamrMSP
+    peers:
+      - peer0.streamr.domain.com
+      - peer1.streamr.domain.com
+    certificateAuthorities:
+    - ca_streamr
+
+  lynkeus:
+    mspid: LynkeusMSP
+    peers:
+      - peer0.lynkeus.domain.com
+      - peer1.lynkeus.domain.com
+    certificateAuthorities:
+      - ca_lynkeus
+
+orderers:
+  orderer0.ordererorg.domain.com:
+    url: grpcs://localhost:9051
+    grpcOptions:
+      ssl-target-name-override: orderer0.ordererorg.domain.com
+      hostnameOverride: orderer0.ordererorg.domain.com
+      grpc.keepalive_timeout_ms: 20000
+    tlsCACerts:
+      path: ../../organizations/ordererOrganizations/ordererorg.domain.com/orderers/orderer0.ordererorg.domain.com/tls/tlscacerts/ca.crt
+
+  orderer1.ordererorg.domain.com:
+    url: grpcs://localhost:9061
+    grpcOptions:
+      ssl-target-name-override: orderer1.ordererorg.domain.com
+      hostnameOverride: orderer1.ordererorg.domain.com
+      grpc.keepalive_timeout_ms: 20000
+    tlsCACerts:
+      path: ../../organizations/ordererOrganizations/ordererorg.domain.com/orderers/orderer1.ordererorg.domain.com/tls/tlscacerts/ca.crt
+
+  orderer2.ordererorg.domain.com:
+    url: grpcs://localhost:9071
+    grpcOptions:
+      ssl-target-name-override: orderer2.ordererorg.domain.com
+      hostnameOverride: orderer2.ordererorg.domain.com
+      grpc.keepalive_timeout_ms: 20000
+    tlsCACerts:
+      path: ../../organizations/ordererOrganizations/ordererorg.domain.com/orderers/orderer2.ordererorg.domain.com/tls/tlscacerts/ca.crt
+
+
+peers:  
+  peer0.streamr.domain.com:
+    url: grpcs://localhost:7070
+    tlsCACerts:
+      path: ../../organizations/peerOrganizations/streamr.domain.com/peers/peer0.streamr.domain.com/tls/tlscacerts/ca.crt
+    grpcOptions:
+      hostnameOverride: peer0.streamr.domain.com
+      grpc.keepalive_timeout_ms: 20000
+      ssl-target-name-override: peer0.streamr.domain.com
+
+  peer1.streamr.domain.com:
+    url: grpcs://localhost:7080
+    tlsCACerts:
+      path: ../../organizations/peerOrganizations/streamr.domain.com/peers/peer1.streamr.domain.com/tls/tlscacerts/ca.crt
+    grpcOptions:
+      hostnameOverride: peer1.streamr.domain.com
+      grpc.keepalive_timeout_ms: 20000
+      ssl-target-name-override: peer1.streamr.domain.com
+  
+  peer0.lynkeus.domain.com:
+    url: grpcs://localhost:8080
+    tlsCACerts:
+      path: ../../organizations/peerOrganizations/lynkeus.domain.com/peers/peer0.lynkeus.domain.com/tls/tlscacerts/ca.crt
+    grpcOptions:
+      hostnameOverride: peer0.lynkeus.domain.com
+      grpc.keepalive_timeout_ms: 20000
+      ssl-target-name-override: peer0.lynkeus.domain.com
+
+  peer1.lynkeus.domain.com:
+    url: grpcs://localhost:8090
+    tlsCACerts:
+      path: ../../organizations/peerOrganizations/lynkeus.domain.com/peers/peer1.lynkeus.domain.com/tls/tlscacerts/ca.crt
+    grpcOptions:
+      hostnameOverride: peer1.lynkeus.domain.com
+      grpc.keepalive_timeout_ms: 20000
+      ssl-target-name-override: peer1.lynkeus.domain.com
+
+
+certificateAuthorities:
+  ca_streamr:
+    url: https://localhost:7055
+    caName: ca_streamr
+    tlsCACerts:
+      path: ../../organizations/fabric-ca/streamr/fabric-ca-client-streamr/tls-root-cert/tls-ca-cert.pem
+    httpOptions:
+      verify: true
+      
+  ca_lynkeus:
+    url: https://localhost:8055
+    caName: ca_lynkeus
+    tlsCACerts:
+      path: ../../organizations/fabric-ca/lynkeus/fabric-ca-client-lynkeus/tls-root-cert/tls-ca-cert.pem
+    httpOptions:
+      verify: true

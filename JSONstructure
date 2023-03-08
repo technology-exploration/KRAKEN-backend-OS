@@ -1,0 +1,73 @@
+{
+ "type": "NORMAL"
+ "name": "USD/ETH exchange rate"
+ "description": "Real-time USD/ETH exchange rate data aggregated from several cryptocurrency exchanges."
+ "category": "cryptocurrencies-id"
+ "streams": ["stream-1-id", 
+  "stream-2-id", 
+  "stream-3-id"]
+ "previewStream": "stream-2-id"
+ "previewConfigJson": "string"
+ "ownerAddress": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+ "beneficiaryAddress": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+ "pricePerSecond": 5
+ "priceCurrency": "DATA"
+ "minimumSubscriptionInSeconds": 0
+ "contact": {
+ "email": "firstname.lastname@streamr.network"
+ "url": "https://streamr.network"
+ "social1": "https://github.com/streamr-dev"
+ "social2": "https://twitter.com/streamr"
+ "social3": "https://www.youtube.com/channel/UCGWEA61RueG-9DV53s-ZyJQ"
+ "social4": "https://medium.com/streamrblog"
+}
+ "termsOfUse": {
+ "commercialUse": false
+ "redistribution": false
+ "reselling": false
+ "storage": false
+ "termsName": "Custom terms of use for Product by Company"
+ "termsUrl": "https://streamr.network/termsofuse.html"
+}
+}
+
+{
+ - "id": "11o6bc2HTs6W8oFRpMugmwTeodGTOxSzKQCIHeK_qDnA"
+ "type": "NORMAL"
+ - "state": "NOT_DEPLOYED"
+ - "created": "2018-02-21T12:26:18Z"
+ - "updated": "2018-02-21T12:26:18Z"
+ - "owner": "John Doe"
+ - "imageUrl": "http://www.google.com/a.jpg"
+ - "thumbnailUrl": "http://www.google.com/b.jpg"
+ "name": "USD/ETH exchange rate"
+ "description": "Real-time USD/ETH exchange rate data aggregated from several cryptocurrency exchanges."
+ "category": "cryptocurrencies-id"
+ "streams": ["stream-1-id", 
+  "stream-2-id", 
+  "stream-3-id"]
+ "previewStream": "stream-2-id"
+ "previewConfigJson": "string"
+ "ownerAddress": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+ "beneficiaryAddress": "0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+ "pricePerSecond": 5
+ "priceCurrency": "DATA"
+ "minimumSubscriptionInSeconds": 0
+ - "pendingChanges": "{\"ownerAddress\":\"0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF\"}"
+ "contact": {
+ "email": "firstname.lastname@streamr.network"
+ "url": "https://streamr.network"
+ "social1": "https://github.com/streamr-dev"
+ "social2": "https://twitter.com/streamr"
+ "social3": "https://www.youtube.com/channel/UCGWEA61RueG-9DV53s-ZyJQ"
+ "social4": "https://medium.com/streamrblog"
+}
+ "termsOfUse": {
+ "commercialUse": false
+ "redistribution": false
+ "reselling": false
+ "storage": false
+ "termsName": "Custom terms of use for Product by Company"
+ "termsUrl": "https://streamr.network/termsofuse.html"
+}
+}

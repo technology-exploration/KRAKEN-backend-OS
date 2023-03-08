@@ -1,0 +1,44 @@
+/* Config file for the docdash theme for jsdoc . */
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "source": {
+    "include": [
+      "lib"
+    ],
+    "exclude": [
+      ".git",
+      ".meteor",
+      "node_modules",
+      "docs",
+      "tests",
+      "scripts",
+      "kraken-app"
+    ],
+    "includePattern": ".+\\.js(x|doc)?$"
+  },
+  "plugins": ["plugins/markdown"],
+  "opts": {
+    "encoding": "utf8",
+    "template": "./template",
+    "destination": "./docs/",
+    "recurse": true,
+    "verbose": true,
+    "theme": "cerulean"
+  },
+  "markdown": {
+    "parser": "gfm",
+    "hardwrap": true
+  },
+  "templates": {
+    "systemName": "KRAKEN App API",
+    "theme": "cosmo",
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true,
+      "includeDate": true
+    }
+  }
+}

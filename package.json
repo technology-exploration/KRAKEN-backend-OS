@@ -1,0 +1,66 @@
+{
+  "name": "kraken_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cat /etc/hosts; ls -a; ls -a kraken-app; node index.js",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "build_krakenapp": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@sjwgit.dy.fi:7999/krak/kraken_backend.git"
+  },
+  "author": "TX - Tomorrow Explored",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@fidm/x509": "1.2.1",
+    "config": "3.3.6",
+    "cors": "2.8.5",
+    "dotenv": "10.0.0",
+    "express": "4.18.1",
+    "fabric-ca-client": "2.2.2",
+    "fabric-contract-api": "2.2.2",
+    "fabric-network": "2.2.4",
+    "fabric-shim": "2.2.2",
+    "google-protobuf": "3.20.0",
+    "ink-docstrap": "1.3.2",
+    "js-beautify": "1.14.0",
+    "js-yaml": "4.1.0",
+    "jsonwebtoken": "8.5.1",
+    "jsrsasign": "^10.1.13",
+    "khala-fabric-sdk-node": "1.4.9-0.1.0",
+    "mongodb": "^4.0.1",
+    "mongoose": "5.12.10",
+    "node-fetch": "2.6.7",
+    "nodemailer": "6.7.8",
+    "openssl-nodejs": "1.0.5",
+    "pkcs11js": "1.2.0",
+    "queue": "6.0.2",
+    "streamr-client": "5.4.5",
+    "swagger-jsdoc": "6.1.0",
+    "swagger-ui-express": "4.3.0",
+    "winston": "2.4.5",
+    "winston-mongodb": "3.0.2",
+    "ws": "7.4.3"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "4.1.1",
+    "@types/js-yaml": "4.0.5",
+    "@types/jsrsasign": "10.5.1",
+    "@types/lodash": "4.14.182",
+    "@types/mongodb": "4.0.7",
+    "@types/node": "17.0.35",
+    "chai": "4.3.6",
+    "chai-as-promised": "7.1.1",
+    "jest": "28.1.0",
+    "supertest": "6.2.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "verbose": true
+  }
+}
